@@ -1,0 +1,37 @@
+###############################################################################
+# Syntax Coloring Map For PulseRainUARTConsole
+###############################################################################
+
+###############################################################################
+# Datatypes (KEYWORD1)
+###############################################################################
+
+PulseRainUARTConsole	KEYWORD1
+
+###############################################################################
+# Methods and Functions (KEYWORD2)
+###############################################################################
+
+setPrompt	KEYWORD2
+run	KEYWORD2
+add_cmd	KEYWORD2
+set_validate_input_function	KEYWORD2
+set_escape_sequence	KEYWORD2
+set_echo_enable	KEYWORD2
+help	KEYWORD2
+
+###############################################################################
+# Instances (KEYWORD3)
+###############################################################################
+
+PULSERAIN_UART_CONSOLE	KEYWORD3
+
+###############################################################################
+# Constants (LITERAL1)
+###############################################################################
+PULSERAIN_UART_CONSOLE_MAX_NUM_OF_COMMANDS	LITERAL1
+PULSERAIN_UART_CONSOLE_MAX_PROMPT_LENGTH	LITERAL1
+PULSERAIN_UART_CONSOLE_MAX_ESCAPE_SEQ_LEN	LITERAL1
+PULSERAIN_UART_CONSOLE_MAX_INPUT_LENGTH	LITERAL1
+PULSERAIN_UART_CONSOLE_HISTORY_BUFFER_SIZE	LITERAL1
+
