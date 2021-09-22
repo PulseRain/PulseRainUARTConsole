@@ -18,8 +18,8 @@
 ###############################################################################
 */
 
-#ifndef PULSERAIN_UART_CONSOLE
-#define PULSERAIN_UART_CONSOLE
+#ifndef PULSERAIN_UART_CONSOLE_H
+#define PULSERAIN_UART_CONSOLE_H
 
 #include "Arduino.h"
 
@@ -127,5 +127,6 @@ class PulseRainUARTConsole {
         char _history_buffer [PULSERAIN_UART_CONSOLE_HISTORY_BUFFER_SIZE][PULSERAIN_UART_CONSOLE_MAX_INPUT_LENGTH];
 };
 
-#endif
+extern PulseRainUARTConsole PULSERAIN_UART_CONSOLE;
 
+#endif

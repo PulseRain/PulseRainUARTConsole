@@ -214,18 +214,14 @@ void PulseRainUARTConsole :: _tab_auto_completion()
     int match_index;
     
     int i = 0, j;
-    int mismatch_flag [PULSERAIN_UART_CONSOLE_MAX_NUM_OF_COMMANDS] = {0};
-    
 
     for (i = 0; i < _current_line_char_count; ++i) {
         
         match_cnt = 0;
         for (j = 0; j < _num_of_commands; ++j) {
-            if ((_current_line[i] == _commands[j].cmd_name[i]) && (!mismatch_flag[j])) {
+            if (_current_line[i] == _commands[j].cmd_name[i]) {
                 ++match_cnt;
                 index = j; 
-            } else {
-                mismatch_flag[j] = 1;
             }
         }
 
@@ -234,14 +230,6 @@ void PulseRainUARTConsole :: _tab_auto_completion()
         }
         
     } // End for loop i
-    
-    match_cnt = 0;
-    for (j = 0; j < _num_of_commands; ++j) {
-        if (!mismatch_flag[j]) {
-            ++match_cnt;
-            index = j;
-        }
-    }
 
     old_match_cnt = match_cnt;
     
@@ -252,7 +240,7 @@ void PulseRainUARTConsole :: _tab_auto_completion()
 
             match_cnt = 0;
             for (j = 0; j < _num_of_commands; ++j) {
-                if ((k < strlen(_commands[j].cmd_name)) && (k < strlen(_commands[index].cmd_name)) && (!mismatch_flag[j])) {
+                if ((k < strlen(_commands[j].cmd_name)) && (k < strlen(_commands[index].cmd_name))) {
                     if (_commands[j].cmd_name[k] == _commands[index].cmd_name[k]) {
                         ++match_cnt;
                     }
